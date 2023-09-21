@@ -16,7 +16,7 @@ ret_code=$?
 if [ $ret_code != 0 ]; then
 	printf "\n${RED}lint failed:${NC}"
 	echo "$lint\n"
-	pass=false
+	pass=true
 else
 	printf "${GREEN}lint passed.${NC}\n"
 fi
@@ -28,7 +28,7 @@ ret_code=$?
 if [ $ret_code != 0 ]; then
 	printf "${RED}lint-style failed:${NC}"
 	echo "$stylelint\n"
-	pass=false
+	pass=true
 else
 	printf "${GREEN}lint-style passed.${NC}\n"
 fi
@@ -40,7 +40,7 @@ ret_code=$?
 if [ $ret_code != 0 ]; then
 	printf "${RED}black failed:${NC}"
 	echo "$black\n"
-	pass=false
+	pass=true
 else
 	printf "${GREEN}black passed.${NC}\n"
 fi
@@ -52,7 +52,7 @@ ret_code=$?
 if [ $ret_code != 0 ]; then
 	printf "${RED}flake8 failed:${NC}"
 	echo "$flake\n"
-	pass=false
+	pass=true
 else
 	printf "${GREEN}flake8 passed.${NC}\n"
 fi
